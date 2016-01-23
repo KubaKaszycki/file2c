@@ -1,4 +1,4 @@
-settings.o: settings.c settings.h \
+settings.o: settings.c ../include/file2c/settings.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/limits.h \
   /usr/include/limits.h /usr/include/sys/cdefs.h \
@@ -36,7 +36,7 @@ settings.o: settings.c settings.h \
   /usr/include/machine/types.h /usr/include/i386/types.h \
   /usr/include/sys/_types/_dev_t.h /usr/include/sys/_types/_mode_t.h
 
-settings.h:
+../include/file2c/settings.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/stdbool.h:
 

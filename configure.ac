@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([File2C], [0.1], [kuba.kaszycki@gmail.com], [file2c])
-AC_CONFIG_SRCDIR([genfile.c])
+AC_CONFIG_SRCDIR([src/genfile.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
@@ -25,5 +25,9 @@ AC_TYPE_SSIZE_T
 # Checks for library functions.
 AC_FUNC_MALLOC
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile
+		 doc/Makefile
+		 include/Makefile
+		 man/Makefile
+		 src/Makefile])
 AC_OUTPUT

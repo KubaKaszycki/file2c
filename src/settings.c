@@ -1,4 +1,4 @@
-#include <settings.h>
+#include <file2c/settings.h>
 #include <stdbool.h>
 #include <stdlib.h>
 

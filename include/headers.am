@@ -1,0 +1,4 @@
+nobase_include_HEADERS = \
+file2c/genfile.h \
+file2c/main.h \
+file2c/settings.h 

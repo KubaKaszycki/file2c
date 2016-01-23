@@ -1,12 +1,12 @@
-#include <genfile.h>
-#include <settings.h>
+#include <file2c/genfile.h>
+#include <file2c/settings.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <errno.h>
 #include <ctype.h>
 
-static char* hex2s(unsigned int i) {
+char* hex2s(unsigned int i) {
 	if(i < 512) {
 		char* buf = (char*) malloc(4);
 		snprintf(buf, 4, "%03o", i);

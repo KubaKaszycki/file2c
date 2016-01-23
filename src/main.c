@@ -1,6 +1,7 @@
 #include <config.h>
-#include <main.h>
-#include <settings.h>
+#include <file2c/main.h>
+#include <file2c/genfile.h>
+#include <file2c/settings.h>
 #include <getopt.h>
 #include <unistd.h>
 #include <string.h>
@@ -8,7 +9,6 @@
 #include <stdlib.h>
 #include <libgen.h>
 #include <ctype.h>
-#include <genfile.h>
 
 static struct option LONG_OPTIONS[] = {
 	{ "help", no_argument, NULL, 'h' },
@@ -27,7 +27,23 @@ static void print_version() {
 
 static void print_help() {
 	print_version();
-	printf("file2c - convert file to a C resource & more");
+	printf(
+		"file2c - convert file to a C resource & more\n"
+		"Copyright (c) 2016 Jakub Kaszycki\n"
+		"\n"
+		"Usage: file2c [options]\n"
+		"Options:\n"
+		"\t-f <FILE> --file <FILE>     - Use input file <FILE>. This option is required.\n"
+		"\t-o <FILE> --output <FILE>   - Use output file <FILE>. Default value is \"file2c.out\".\n"
+		"\t-v <NAME> --variable <NAME> - Create variable <NAME>, instead of input file name with all\n"
+		"\t                              unsuitable characters turned into underlines.\n"
+		"\t-h --help                   - Print this help message.\n"
+		"\t-V --version                - Print the version of this program.\n"
+		"\t-j --java                   - Use only Java-style escapes (this option is fully supported in C).\n"
+		"\t-J --java-decl              - Create Java-style String declaration, enables -j.\n"
+		"\n"
+		"For details see man page - file2c(1)\n"
+	);
 }
 
 #define do_free(x) do { if(x != NULL) { free(x); x = NULL; } } while(0)

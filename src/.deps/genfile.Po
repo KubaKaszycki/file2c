@@ -1,4 +1,4 @@
-genfile.o: genfile.c genfile.h /usr/include/stdio.h \
+genfile.o: genfile.c ../include/file2c/genfile.h /usr/include/stdio.h \
   /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/Availability.h \
   /usr/include/AvailabilityInternal.h /usr/include/_types.h \
@@ -45,7 +45,7 @@ genfile.o: genfile.c genfile.h /usr/include/stdio.h \
   /usr/include/sys/_pthread/_pthread_t.h \
   /usr/include/sys/_pthread/_pthread_key_t.h \
   /usr/include/sys/_types/_fsblkcnt_t.h \
-  /usr/include/sys/_types/_fsfilcnt_t.h settings.h \
+  /usr/include/sys/_types/_fsfilcnt_t.h ../include/file2c/settings.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/limits.h \
   /usr/include/limits.h /usr/include/machine/limits.h \
@@ -68,7 +68,7 @@ genfile.o: genfile.c genfile.h /usr/include/stdio.h \
   /usr/include/errno.h /usr/include/sys/errno.h /usr/include/ctype.h \
   /usr/include/runetype.h /usr/include/sys/_types/_wint_t.h
 
-genfile.h:
+../include/file2c/genfile.h:
 
 /usr/include/stdio.h:
 
@@ -216,7 +216,7 @@ genfile.h:
 
 /usr/include/sys/_types/_fsfilcnt_t.h:
 
-settings.h:
+../include/file2c/settings.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include/stdbool.h:
 
