@@ -1,0 +1,60 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
+@setfilename file2c.info
+@settitle File2C Manual
+@c %**end of header
+
+@copying
+This is the manual for File2C/
+
+Copyright @copyright{} 2016 Jakub Kaszycki
+This file (and whole File2C) is under General Public License, v3 or later.
+@end copying
+
+@titlepage
+@title File2C
+@page
+@vskip 0pt plus lfilll
+@insertcopying
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top File2C
+
+Convert files to C source & more
+@end ifnottex
+
+@menu
+* Basics::		Basics about File2C
+* CLI::			Command-line invocation
+* API::			C API
+* Wide-characters::	Wide character support
+@end menu
+
+@node Basics
+@chapter Basics
+
+@cindex chapter, first
+
+File2C is a small, but very fast program which converts files into C sources. For example this:
+@code{123$%^789@}|}
+Will be converted into:
+@code{const char test[] = "123\044\045\136789\173\175\174";}
+
+
+@node CLI
+@chapter CLI
+
+@cindex chapter, second
+
+@node API
+@chapter API
+
+@cindex chapter, third
+@node Wide-characters
+@chapter Wide-characters
+
+@cindex chapter, forth
