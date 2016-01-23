@@ -6,7 +6,7 @@ File2c is a simple, but very fast tool for including files to C programs. Have y
 additional data attached to your program and placed in `/usr/share`? If you would do this, someone might have forgotten placing
 the file in data folder, and gets angry of your program not working. Then you use this. You should call:
 
-	`file2c -f myfile.zip -o myfile.zip.c -j`
+	file2c -f myfile.zip -o myfile.zip.c -j
 
 Without the -j option, your C code would be GCC dependent. Now it should work on any C99 (and mostly and C89) supporting
 compiler.
