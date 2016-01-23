@@ -1,0 +1,63 @@
+.TH FILE2C 3
+.SH NAME
+file2c/*.h \- An API for \fBfile2c(1)\fR
+.SH SYNOPSIS
+#include <\fIstdio.h\fR>
+.br
+#include <\fIsys/types.h\fR>
+.br
+#include <\fIfile2c/genfile.h\fR>
+
+ssize_t \fIcopy_escaped\fR(FILE*, FILE*);
+.br
+char* \fIhex2s\fR(unsigned int);
+
+#include <\fIfile2c/main.h\fR>
+
+int \fIfile2c_main\fR(int, char**);
+
+#include <\fIstdbool.h\fR>
+#include <\fIfile2c/settings.h\fR>
+
+extern char* \fIuse_variable_name\fR;
+.br
+extern bool \fIuse_java_escapes\fR;
+.br
+extern bool \fIuse_java_decl\fR;
+.br
+extern char* \fIfile_name\fR;
+.br
+extern char* \fIoutfile\fR;
+.SH DESCRIPTION
+\fBcopy_escaped\fR \- read characters from first argument, write to second argument, escaping non-alphanumeric characters.
+
+\fBhex2s\fR \- Convert a character to octal/hexadecimal string.
+
+\fBfile2c_main\fR \- Run \fBfile2c(1)\fR without starting a separate process
+
+\fBuse_variable_name\fR \- Used variable name. If NULL, will be set to input file name with any insufficient character replaced
+to underlines.
+
+\fBuse_java_escapes\fR \- If set to true, only Java/C89 compatible escape characters will be used.
+
+\fBuse_java_decl\fR \- If set to true, declaration will look:
+.RS 3
+final String xxx = "...";
+.RE
+rather than:
+.RS 3
+const char xxx[] = "...";
+.RE
+
+\fBfile_name\fR \- Name of input file.
+
+\fBoutfile\fR \- Name of output file.
+.SH SEE ALSO
+.B file2c(1)
+.br
+See Texinfo manual: \fBinfo file2c\fR
+.SH AUTHORS
+This man page is \fBcopyright Jakub Kaszycki\fR.
+File2C is \fbcopyright Jakub Kaszycki\fR.
+.SH STANDARDS
+This program does not conform to any standards. Yeah!!!
