@@ -6,4 +6,37 @@ file2c \- Convert file to C source & more
 \-f \fIfile\fR [\fIoptions\fR]
 .SH DESCRIPTION
 .B file2c
-
+puts a file's contents (we now call this file \fIinput\fR) to a C source or Java incomplete source file (we now call this file
+\fIoutput\fR). The characters are copied byte\-by\-byte (wide characters are read as more than one one-byte characters).
+.SH OPTIONS
+.TP
+.BR \-f " " \fIFILE\fR ", " \-\-file " " \fIFILE\fR
+Select an input file.
+.B This option is required.
+.TP
+.BR \-o " " \fIFILE\fR ", " \-\-output " " \fIFILE\fR
+Select an output file. Default name is \fIfile2c.out\fR. This option is reccommended to use.
+.TP
+.BR \-v " " \fIVARIABLE\fR ", " \-\-variable " " \fIVARIABLE\fR
+Select the name of output variable (default is input file name with all unsuitable characters replaced to underlines, if input
+file name starts with a digit, it's also replaced to an underline).
+.TP
+.BR \-V ", " \-\-version
+Print version and exit with status code 0.
+.TP
+.BR \-h ", " \-\-help
+Print version and short help message, exit with status code 0.
+.TP
+.BR \-j ", " \-\-java
+Use only Java/C89 compatible escape characters.
+.TP
+.BR \-J ", " \-\-java\-decl
+Auto-implies \fI-j\fR, use Java-style String variable rather than C declarations
+.SH SEE ALSO
+.B file2c(3)
+See info manual: \fIinfo file2c\fR
+.SH AUTHORS
+This man page is \fBcopyright Jakub Kaszycki\fR.
+File2C is \fBcopyright Jakub Kaszycki\fR.
+.SH STANDARDS
+This tool does not conform to any standards. Yeah!!!
