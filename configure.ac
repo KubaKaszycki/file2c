@@ -11,6 +11,7 @@ AM_INIT_AUTOMAKE([gnits])
 
 # Checks for programs.
 AC_PROG_CC
+gl_EARLY
 
 # Checks for libraries.
 
@@ -25,9 +26,12 @@ AC_TYPE_SSIZE_T
 # Checks for library functions.
 AC_FUNC_MALLOC
 
+gl_INIT
+
 AC_CONFIG_FILES([Makefile
 		 doc/Makefile
 		 include/Makefile
+		 gnulib/Makefile
 		 man/Makefile
 		 src/Makefile])
 AC_OUTPUT

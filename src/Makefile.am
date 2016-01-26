@@ -6,4 +6,4 @@
 bin_PROGRAMS = file2c
 file2c_SOURCES = genfile.c main.c settings.c 
 
-AM_CPPFLAGS = -I ../include
+AM_CPPFLAGS = -I ../include -I ../gnulib
