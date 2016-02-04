@@ -1,0 +1,60 @@
+This is file2c.info, produced by makeinfo version 6.0 from file2c.texi.
+
+This is the manual for File2C/
+
+   Copyright (C) 2016 Jakub Kaszycki This file (and whole File2C) is
+under General Public License, v3 or later.
+
+
+File: file2c.info,  Node: Top,  Next: Basics,  Up: (dir)
+
+File2C
+******
+
+Convert files to C source & more
+
+* Menu:
+
+* Basics::		Basics about File2C
+* CLI::			Command-line invocation
+* API::			C API
+* Wide-characters::	Wide character support
+
+
+File: file2c.info,  Node: Basics,  Next: CLI,  Prev: Top,  Up: Top
+
+1 Basics
+********
+
+File2C is a small, but very fast program which converts files into C
+sources.  For example this: '123$%^789}|' Will be converted into: 'const
+char test[] = "123\044\045\136789\173\175\174";'
+
+
+File: file2c.info,  Node: CLI,  Next: API,  Prev: Basics,  Up: Top
+
+2 CLI
+*****
+
+
+File: file2c.info,  Node: API,  Next: Wide-characters,  Prev: CLI,  Up: Top
+
+3 API
+*****
+
+
+File: file2c.info,  Node: Wide-characters,  Prev: API,  Up: Top
+
+4 Wide-characters
+*****************
+
+
+
+Tag Table:
+Node: Top218
+Node: Basics462
+Node: CLI743
+Node: API826
+Node: Wide-characters918
+
+End Tag Table

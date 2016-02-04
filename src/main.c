@@ -1,11 +1,11 @@
 #include <config.h>
+#include <stdio.h>
 #include <file2c/main.h>
 #include <file2c/genfile.h>
 #include <file2c/settings.h>
 #include <getopt.h>
 #include <unistd.h>
 #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <libgen.h>
 #include <ctype.h>
